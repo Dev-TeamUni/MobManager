@@ -1,17 +1,31 @@
 package net.teamuni.mobmanager;
 
+import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.io.File;
+
 public final class Mobmanager extends JavaPlugin {
+    private FileConfiguration message;
 
     @Override
     public void onEnable() {
-        // Plugin startup logic
-
+        //create message file
+        File messageFile = new File(this.getDataFolder(), "message.yml");
+        if(!messageFile.exists()) {
+            //make dir and message file
+            //this.saveResource("message.yml", false);
+        }
+        this.message = YamlConfiguration.loadConfiguration(messageFile);
+        //create config file
+        this.saveDefaultConfig();
+        this.getServer().getPluginManager().registerEvents(new MobListener(this.getConfig()), this);
+        this.getLogger().info(this.message.getString("reload-complete"));
     }
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
+
     }
 }
