@@ -14,12 +14,13 @@ public final class Mobmanager extends JavaPlugin {
         //create message file
         File messageFile = new File(this.getDataFolder(), "message.yml");
         if(!messageFile.exists()) {
-            //make dir and message file
-            //this.saveResource("message.yml", false);
+            this.saveResource("message.yml", false);
         }
         this.message = YamlConfiguration.loadConfiguration(messageFile);
+
         //create config file
         this.saveDefaultConfig();
+
         this.getServer().getPluginManager().registerEvents(new MobListener(this.getConfig()), this);
         this.getLogger().info(this.message.getString("reload-complete"));
     }
