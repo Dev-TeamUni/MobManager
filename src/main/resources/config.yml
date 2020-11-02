@@ -1,28 +1,66 @@
-CONTACT: false
-ENTITY_ATTACK: false
-ENTITY_SWEEP_ATTACK: false
-PROJECTILE: false
-SUFFOCATION: false
-FALL: true
-FIRE: false
-FIRE_TICK: false
-MELTING: false
-LAVA: false
-DROWNING: false
-BLOCK_EXPLOSION: false
-ENTITY_EXPLOSION: false
-VOID: false
-LIGHTNING: false
-SUICIDE: false
-STARVATION: false
-POISON: false
-MAGIC: false
-WITHER: false
-FALLING_BLOCK: false
-THORNS: false
-DRAGON_BREATH: false
-CUSTOM: false
-FLY_INTO_WALL: false
-HOT_FLOOR: false
-CRAMMING: false
-DRYOUT: false
+
+#True is Damage enable, False is Damage Disable
+MOB_DAMAGE_REASON:
+  CONTACT: false
+  ENTITY_ATTACK: false
+  ENTITY_SWEEP_ATTACK: false
+  PROJECTILE: false
+  SUFFOCATION: false
+  FALL: true
+  FIRE: false
+  FIRE_TICK: false
+  MELTING: false
+  LAVA: false
+  DROWNING: false
+  BLOCK_EXPLOSION: false
+  ENTITY_EXPLOSION: false
+  VOID: false
+  LIGHTNING: false
+  SUICIDE: false
+  STARVATION: false
+  POISON: false
+  MAGIC: false
+  WITHER: false
+  FALLING_BLOCK: false
+  THORNS: false
+  DRAGON_BREATH: false
+  CUSTOM: false
+  FLY_INTO_WALL: false
+  HOT_FLOOR: false
+  CRAMMING: false
+  DRYOUT: false
+
+#True is Spawn enable, False is Spawn Disable
+MOB_SPAWN_REASON:
+  BEEHIVE: false
+  BREEDING: false
+  BUILD_IRONGOLEM: false
+  BUILD_SNOWMAN: false
+  BUILD_WITHER: false
+  CURED: false
+  CUSTOM: false
+  DEFAULT: false
+  DISPENSE_EGG: false
+  DROWNED: false
+  EGG: false
+  ENDER_PEARL: false
+  EXPLOSION: false
+  INFECTION: false
+  JOCKEY: false
+  LIGHTNING: false
+  MOUNT: false
+  NATURAL: false
+  NETHER_PORTAL: false
+  OCELOT_BABY: false
+  PATROL: false
+  RAID: false
+  REINFORCEMENTS: false
+  SHEARED: false
+  SHOULDER_ENTITY: false
+  SILVERFISH_BLOCK: false
+  SLIME_SPLIT: false
+  SPAWNER: false
+  SPAWNER_EGG: false
+  TRAP: false
+  VILLAGE_DEFENSE: false
+  VILLAGE_INVASION: false
