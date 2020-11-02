@@ -16,6 +16,7 @@ public class MobListener implements Listener {
 
     @EventHandler
     public void onDamageEntity(EntityDamageEvent event) {
+        //몹 데미지 상활별 제한
         if(event.getEntity() instanceof Mob
                 && this.config.getBoolean("MOB_DAMAGE_REASON."+event.getCause().name())) {
             event.setCancelled(true);
@@ -24,8 +25,15 @@ public class MobListener implements Listener {
 
     @EventHandler
     public void onSpawnCreature(CreatureSpawnEvent event) {
+        //몹 상황별 스폰 제한
         if(event.getEntity() instanceof Mob
                 && this.config.getBoolean("MOB_SPAWN_REASON"+event.getSpawnReason().name())) {
+            event.setCancelled(true);
+        }
+
+        //몹 종류별 스폰 제한
+        if(event.getEntity() instanceof Mob
+                && this.config.getBoolean("MOB_SPAWN."+event.getEntityType().name())) {
             event.setCancelled(true);
         }
     }
